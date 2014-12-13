@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1390952665"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi -Fi/home/students/inf/f/fj346919/Pobrane/TestyJezykoweJemioło/lib/x86_64-linux -Fl/opt/gnome/lib -Fu/home/students/inf/f/fj346919/.lazarus/lib/units/x86_64-linux/gtk2 -Fu/home/students/inf/f/fj346919/.lazarus/lib/LCLBase/units/x86_64-linux -Fu/home/students/inf/f/fj346919/.lazarus/lib/LazUtils/lib/x86_64-linux -Fu/home/students/inf/f/fj346919/.lazarus/lib/units/x86_64-linux -Fu/home/students/inf/f/fj346919/Pobrane/TestyJezykoweJemioło/ -FU/home/students/inf/f/fj346919/Pobrane/TestyJezykoweJemioło/lib/x86_64-linux/ -l -dLCL -dLCLgtk2 testyJezykowe.lpr"/>
+</CONFIG>

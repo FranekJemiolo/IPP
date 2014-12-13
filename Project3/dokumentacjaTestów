@@ -1,0 +1,16 @@
+Testy tworzymy taki schematem.
+W pierwszej linii podane jest zdanie, w którym każda luka oznaczona jest ... (trzema kropkami) oraz oddzielona jest spacjami.
+Każde słowo powinno być oddzielone spacją. Znaki interpunkcje powinny być nie łączone z oznaczeniem luki (niedozwolone są wszelkie zapisy typu ...? bądź ....)
+W drugiej linii podajemy słowa, każde oddzielone spacją, które mają być umieszczone w magazynie.
+W trzeciej i ostatniej lini (dla pojedynczego zdania testowanego) zapisane jest poprawne zdanie o treści identycznej do zapisanego w pierwszej linii jednak zamiast luk (...) posiada ono słowo,
+które jest rozwiązaniem poprzedzone * . Np 'He *will be there.' dla zdania He ... be there.
+Ilość linijek musi być podzielna przez 3 w związku z podanym schematem tworzenia testów.
+Oto schemat:
+pewne zdanie ... dalsza część zdania ... koniec zdania
+słowo1 słowo2 słowon
+pewne zdanie *słowok dalsza część zdania *słowoj koniec zdania
+Jak widać generowanie testów pozwala na dość dużą swobodę kreacji testów.
+Poprawne jest zdanie wygenerowane z samych luk jednak musi ono posiadać odpowiednie odpowiedzi.
+Zakładam, że nie ma sensu tworzenia zdań pustych. (chociaż program powinien przetrawić 3 puste wiersze pod rząd)
+Ponieważ nie ma ograniczeń na długość znaków w String, zakładam, że będzie ona skończona i nie wygórowana (ograniczmy je do 300 znaków), na tyle aby zmieściło się całe zdanie w panelu.
+Tworzenie testów z podanym schematem nie powinno sprawić problemów.

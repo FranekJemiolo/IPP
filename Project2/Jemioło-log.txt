@@ -1,0 +1,87 @@
+git clone https://fj346919@git.mimuw.edu.pl/fj346919.git
+git branch AddMake
+git checkout AddMake
+git add .gitignore
+git add Makefile
+git commit -m "Dodany plik Makefile oraz gitignore"
+git checkout master 
+git merge AddMake
+git checkout debug
+git merge AddMake
+git checkout v1
+git merge AddMake
+git checkout v2
+git merge AddMake
+git checkout v3
+git merge AddMake
+git checkout tests
+git merge AddMake
+git checkout debug
+git add print.pas
+git commit -m "Usunięty wyciek w print.pas"
+git add skiplist.pas
+git add main.pas
+git commit -m "Usunięte wycieki w skiplist.pas"
+// Dodane usuwanie z pamięci w Clear oraz Remove oraz usuwane sa PFindListy oraz Clear na końcu main.pas
+git checkout v1
+git cherry-pick 7630e3b6a07edf524b19198bbf36bd1711324681
+// Dodany commit usuwajacy wycieki
+git add main.pas // konflikt usunięty
+git commit
+git branch v1-debug
+git checkout debug
+git rebase -i v1-debug
+git add main.pas
+git rebase --continue
+git add main.pas
+git rebase --continue
+git checkout v1-debug
+git merge debug
+git checkout v2
+git add skiplist.pas
+git commit -m "Działające v2"
+git merge tests
+git checkout v3
+git add skiplist.pas
+git commit -m "Działające v3"
+git merge tests
+git add main.pas
+git add gen.pas
+// Dostosowane testy do v3
+git commit -m "Testy dostosowane do v3"
+git push --all
+// Okazało się, że nie przesłała się gałąź debug dobrze poprawiam ją ręcznie z gałęzi v1-debug
+git checkout debug
+git cherry-pick 2e22e0f6fbc1e9d251ec47ae7ee5ab10507aa3a1
+git add main.pas
+git commit
+git cherry-pick cb1ff4ff16aebca5c287bc6e7e2ae84a682fc60c
+git add print.pas
+git commit
+git push --all
+git merge origin/AddMake
+git push --all
+// Trochę tam nakręciłem na końcu, ale to dlatego bo zapomniałem o git push --force co przypomniało mi się dopiero jak już było za późno.
+// Wprowadzane drobne poprawki do kazdej z wersji
+git checkout v1
+git add skiplist.pas
+git commit --amend
+git checkout v1-debug
+git add skiplist.pas
+git commit --amend
+git checkout debug
+git commit --amend
+git checkout v2
+git add skiplist.pas
+// Nie mam pojęcia dlaczego assertion wypadał w onetest, ponieważ u mnie cały czas nie wypada, zmienione SetHeight(list,0) na FreeTower(list) i list := nil w Clear i Remove
+git commit --amend
+git checkout v3
+git add skiplist.pas
+git add main.pas
+git commit -m "debugowanie"
+git add print.pas
+git add main.pas
+git add skiplist.pas
+git add gen.pas
+git commit -m "Poprawki"
+git push --all --force

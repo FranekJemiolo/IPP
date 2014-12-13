@@ -1,0 +1,9 @@
+object FormularzEdytora: TFormularzEdytora
+  Left = 395
+  Height = 240
+  Top = 163
+  Width = 320
+  Caption = 'FormularzEdytora'
+  OnCreate = FormCreate
+  LCLVersion = '1.0.10.0'
+end

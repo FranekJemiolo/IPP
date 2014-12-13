@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="testyJezykowe.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testyJezykowe"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="5" Y="11"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="../Proba/unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <UsageCount Value="24"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../Proba/unit2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
+        <UsageCount Value="24"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="30" Y="54"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="unit2.pas"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="194"/>
+        <CursorPos X="52" Y="204"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../Proba/unit1.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit5>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="testyJezykowe.lpr"/>
+        <Caret Line="10" Column="27" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="23" Column="7" TopLine="17"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="41" Column="19" TopLine="17"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unit2.pas"/>
+        <Caret Line="369" Column="62" TopLine="338"/>
+      </Position4>
+      <Position5>
+        <Filename Value="unit2.pas"/>
+        <Caret Line="307" Column="36" TopLine="296"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unit2.pas"/>
+        <Caret Line="308" Column="16" TopLine="293"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unit2.pas"/>
+        <Caret Line="42" Column="9" TopLine="35"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unit2.pas"/>
+        <Caret Line="288" Column="18" TopLine="277"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

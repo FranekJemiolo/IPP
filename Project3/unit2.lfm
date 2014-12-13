@@ -1,0 +1,135 @@
+object Form2: TForm2
+  Left = 254
+  Height = 716
+  Top = 67
+  Width = 1366
+  Caption = 'Testy językowe'
+  ClientHeight = 716
+  ClientWidth = 1366
+  Color = clSkyBlue
+  OnCreate = FormCreate
+  LCLVersion = '1.0.10.0'
+  object PanelZdanie: TPanel
+    Left = 0
+    Height = 363
+    Top = 16
+    Width = 900
+    Color = clSilver
+    Font.Height = -80
+    Font.Name = 'Purisa'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object PanelMagazyn: TPanel
+    Left = 0
+    Height = 341
+    Top = 374
+    Width = 900
+    Color = clTeal
+    ParentColor = False
+    TabOrder = 1
+  end
+  object PrzyciskZamknij: TButton
+    Left = 912
+    Height = 137
+    Top = 560
+    Width = 382
+    Caption = 'Zamknij'
+    Color = clGray
+    Font.Color = clSilver
+    Font.Height = -49
+    Font.Name = 'Impact'
+    OnClick = PrzyciskZamknijClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object PrzyciskNastepne: TButton
+    Left = 912
+    Height = 131
+    Top = 400
+    Width = 382
+    Caption = 'Następne zdanie'
+    Color = clGray
+    Font.Color = clSilver
+    Font.Height = -49
+    Font.Name = 'Impact'
+    OnClick = PrzyciskNastepneClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Test: TLabel
+    Left = 912
+    Height = 60
+    Top = 24
+    Width = 144
+    Caption = 'Zdanie:'
+    Font.Color = clNavy
+    Font.Height = -49
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LicznikTestu: TLabel
+    Left = 1064
+    Height = 60
+    Top = 24
+    Width = 27
+    Caption = '0'
+    Font.Color = clNavy
+    Font.Height = -49
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Poprawnych: TLabel
+    Left = 912
+    Height = 60
+    Top = 192
+    Width = 260
+    Caption = 'Poprawnych:'
+    Font.Color = clGreen
+    Font.Height = -49
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Bledy: TLabel
+    Left = 912
+    Height = 60
+    Top = 280
+    Width = 169
+    Caption = 'Błędów: '
+    Font.Color = clRed
+    Font.Height = -49
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LicznikPoprawnych: TLabel
+    Left = 1184
+    Height = 60
+    Top = 192
+    Width = 27
+    Caption = '0'
+    Font.Color = clGreen
+    Font.Height = -49
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+    OnClick = LicznikPoprawnychClick
+  end
+  object LicznikBledow: TLabel
+    Left = 1088
+    Height = 60
+    Top = 280
+    Width = 27
+    Caption = '0'
+    Font.Color = clRed
+    Font.Height = -49
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+end

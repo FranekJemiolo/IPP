@@ -1,0 +1,119 @@
+object FormularzStartowy: TFormularzStartowy
+  Left = 312
+  Height = 768
+  Top = 207
+  Width = 1366
+  Caption = 'FormularzStartowy'
+  ClientHeight = 768
+  ClientWidth = 1366
+  Color = clSilver
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '1.0.10.0'
+  Visible = True
+  object LabelPilka: TLabel
+    Left = 544
+    Height = 132
+    Top = 24
+    Width = 220
+    Caption = 'Piłka'
+    Font.Height = -107
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object PrzyciskStart: TButton
+    Left = 440
+    Height = 193
+    Top = 248
+    Width = 427
+    Caption = 'Nowa gra'
+    Color = clSkyBlue
+    Font.Height = -107
+    Font.Name = 'Impact'
+    OnClick = PrzyciskStartClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object RozgrywkaLabel: TLabel
+    Left = 50
+    Height = 34
+    Top = 66
+    Width = 260
+    Caption = 'Wybierz tryb rozgrywki :'
+    Font.Height = -27
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object ListBoxTryb: TListBox
+    Left = 50
+    Height = 72
+    Top = 120
+    Width = 258
+    Color = clSkyBlue
+    Items.Strings = (
+      '0. Gracz vs Gracz'
+      '1. Gracz vs Komputer'
+      '2. Komputer vs Komputer'
+    )
+    ItemHeight = 20
+    OnSelectionChange = ListBoxTrybSelectionChange
+    ScrollWidth = 254
+    TabOrder = 1
+  end
+  object RozmiaryLabel: TLabel
+    Left = 50
+    Height = 34
+    Top = 208
+    Width = 281
+    Caption = 'Wybierz rozmiary boiska :'
+    Font.Height = -27
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object ListBoxRozmiary: TListBox
+    Left = 50
+    Height = 96
+    Top = 240
+    Width = 258
+    Color = clSkyBlue
+    Items.Strings = (
+      'mały'
+      'średni'
+      'duży'
+      'gigantyczny'
+    )
+    ItemHeight = 20
+    OnSelectionChange = ListBoxRozmiarySelectionChange
+    ScrollWidth = 254
+    TabOrder = 2
+  end
+  object PrzyciskZamknij: TButton
+    Left = 1008
+    Height = 136
+    Top = 616
+    Width = 344
+    Caption = 'Zamknij'
+    Color = clSkyBlue
+    Font.Height = -80
+    Font.Name = 'Impact'
+    OnClick = PrzyciskZamknijClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object PrzyciskWczytaj: TButton
+    Left = 488
+    Height = 136
+    Top = 472
+    Width = 336
+    Caption = 'Wczytaj grę'
+    Color = clSkyBlue
+    Font.Height = -67
+    Font.Name = 'Impact'
+    OnClick = PrzyciskWczytajClick
+    ParentFont = False
+    TabOrder = 4
+  end
+end

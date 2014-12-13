@@ -1,0 +1,141 @@
+unit Start;
+//To jest formularz startowy. W nim inicjujemy nową gre i mamy możliwość wyboru
+//rozmiarów planszy oraz trybu gry.
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+    Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+    ExtCtrls, Gra, Boisko;
+
+  type
+
+    	{ TFormularzStartowy }
+
+    TFormularzStartowy = class(TForm)
+	  PrzyciskWczytaj: TButton;
+    PrzyciskZamknij: TButton;
+    ListBoxRozmiary: TListBox;
+    RozmiaryLabel: TLabel;
+    ListBoxTryb: TListBox;
+    RozgrywkaLabel: TLabel;
+    PrzyciskStart: TButton;
+    LabelPilka: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure ListBoxRozmiarySelectionChange(Sender: TObject; User: boolean);
+    procedure ListBoxTrybSelectionChange(Sender: TObject; User: boolean);
+    procedure PrzyciskStartClick(Sender: TObject);
+    procedure PrzyciskWczytajClick(Sender: TObject);
+    procedure PrzyciskZamknijClick(Sender: TObject);
+    private
+    { private declarations }
+    public
+    { public declarations }
+    end;
+
+  var
+    FormularzStartowy: TFormularzStartowy;
+
+  implementation
+
+  {$R *.lfm}
+
+  { TFormularzStartowy }
+  var
+    trybRozgrywki : LongInt;
+    szerokoscBoiska : LongInt;
+    wysokoscBoiska : LongInt ;
+
+  procedure TFormularzStartowy.PrzyciskZamknijClick(Sender: TObject);
+  begin
+    Close;
+  end;
+
+  procedure TFormularzStartowy.PrzyciskStartClick(Sender: TObject);
+  //Inicjujemy grę.
+  begin
+    Boisko.trybGry := trybRozgrywki;
+    Gra.boiskoGry.stworz(szerokoscBoiska,wysokoscBoiska,FormularzGry.PanelBoiska);
+    Gra.game := true;
+    Gra.wyswietl := false;
+    Gra.trybRozgrywki:= trybRozgrywki;
+    Gra.odczekanychSekund := 0;
+    Gra.edytowany := false;
+    Boisko.wybranyRysunek := 0;
+    FormularzGry.PrzyciskZakonczEdytowanie.Enabled := false;
+    FormularzGry.LabelRuch.Caption := 'Proszę wykonać ruch';
+    if (trybRozgrywki = 0) or (trybRozgrywki = 1) then
+      FormularzGry.PanelBoiska.Enabled := true
+    else
+      FormularzGry.PanelBoiska.Enabled := false;
+    FormularzGry.Show();
+  end;
+
+  procedure TFormularzStartowy.PrzyciskWczytajClick(Sender: TObject);
+  //Jest to wywołanie przycisku wczytaj z formularza gry.
+  begin
+    FormularzGry.Show();
+    FormularzGry.PrzyciskWczytajClick(FormularzGry.PrzyciskWczytaj);
+  end;
+
+  procedure TFormularzStartowy.ListBoxTrybSelectionChange(Sender: TObject; User: boolean);
+  //Wybieramy tryb rozgrywki.
+  begin
+    if not Gra.game then
+    begin
+      trybRozgrywki := ListBoxTryb.ItemIndex;
+      ShowMessage('Wybrano tryb rozgrywki : '+IntToStr(trybRozgrywki));
+    end
+    else
+      ShowMessage('Nie wolno zmieniać trybu podczas gry');
+  end;
+
+  procedure TFormularzStartowy.ListBoxRozmiarySelectionChange(Sender: TObject; User: boolean);
+  //Wybieramy wysokość boiska.
+  var
+    s : String;
+  begin
+    if not Gra.game then
+    begin
+      s := ListBoxRozmiary.GetSelectedText;
+      if s = 'mały' then
+      begin
+        szerokoscBoiska := 6;
+        wysokoscBoiska := 6;
+      end
+      else if s = 'średni' then
+      begin
+        szerokoscBoiska := 8;
+        wysokoscBoiska := 10;
+      end
+      else if s = 'duży' then
+      begin
+        szerokoscBoiska := 10;
+        wysokoscBoiska := 12;
+      end
+      else if s = 'gigantyczny' then
+      begin
+        szerokoscBoiska := 16;
+        wysokoscBoiska := 20;
+      end;
+      ShowMessage('Wybrany rozmiar boiska to : '+s);
+    end
+    else
+      ShowMessage('Nie wolno zmieniać wysokości boiska podczas gry');
+  end;
+
+
+  procedure TFormularzStartowy.FormCreate(Sender: TObject);
+  //Ustawiamy na starcie domyślne wartości rozmiarów boiska oraz trybu gry.
+  begin
+    Gra.game := false;
+    trybRozgrywki := 1;
+    szerokoscBoiska := 8;
+    wysokoscBoiska := 10;
+  end;
+
+
+end.
+

@@ -1,0 +1,54 @@
+Franciszek Jemioło nr indeksu 346919
+Plik Read Me
+--------------------------------------------------------------------------------
+0.Kod
+Ustalam w kodzie tab zamieniony na 2 spacje. Pisane było to jednak w edytorze 
+lazarusa więc otwierając to geditem, nie daje 100%, że będzie wyglądać 
+identycznie...
+Projekt niestety nie był w 100% również udany (niektóre rzeczy można było 
+prościej zrobić, poza tym implementacja też była odmienna od pierwszego pomysłu)
+więc ogólny zarys może być troche zmieniony. Główne zmiany to
+-usunięcie formularza edytora, teraz jest on po prostu w formularzu gry
+-zmiana pól, podział na pola boiska(zielone kwadraty), ściany oraz pola klikalne
+(to na nich ląduje piłka i to one sa klikane, jak sama nazwa wskazuje.
+-historia to teraz tablica dynamiczna (o maksymalnych rozmiarach wszystkich 
+ruchów) stanów gry
+-zapis gry zawiera zarówno historię jak ustalone elementy w projekcie (potrzebne
+są tablice pól klikalnych i tablice informacji o ścianach)
+-strategia to monte carlo, ale z ustawianą ilością zmian gracz (pełnych ruchów)
+-nie ma klasy piłki, jest ona po prostu przypisywana danemu polu klikalnemu
+Dodatkowo, jeśli ma się ochotę można podmienić dowolnie obrazki w folderze 
+obrazki w projekcie, aby otrzymać boisko o własnym upodobaniu. (muszą one 
+oczywiście odpowiadać tym umieszczonym inaczej będzie to bardzo nieczytelne,
+oraz nie zadużej rozdzielczości (50x50), gdyż będzie się to dłużej ładowało).
+--------------------------------------------------------------------------------
+1.Zasady gry
+Rozgrywka polega na kliknięciu w wolne miejsce oddalone o jedną kratkę od piłki.
+Gracz numer 1 ma na celu umieścić piłkę w bramce gracza numer 2, a gracz numer 2
+w bramce gracza numer 1. Rozgrywka kończy się również gdy gracz nie może nigdzie 
+przesunąć piłki, wtedy wygrywa przeciwnik.
+--------------------------------------------------------------------------------
+2.Edytor
+Podczas edytowania klikamy na kreskę w panelu edytora i możemy poprzez
+kliknięcie na polu boiska ją tam umieścić. Historia do momentu edycji zostaje
+usunięta. Piłkę można ustawić za pomocą suwaków. Można również ustalić, który
+gracz ma teraz wykonać ruch. Po edycji rozgrywka jest kontynuuowana. Podczas
+edycji nie ma możliwości zapisywania gry jak i wczytywania. Kończymy edycję
+klikając w przycisk zatwierdź.
+--------------------------------------------------------------------------------
+3.Rozmiary planszy i tryby gry
+Dostępne są 3 tryby gry, podczas wykonywania ruchu przez gracza komputerowego
+nie można klikać nigdzie na boisku (jest ono zablokowane), ale można przerwać
+grę a później ją w razie czego wznowić.
+--------------------------------------------------------------------------------
+4.Zapisywanie i wczytywanie stanu gry
+Podczas zapisywania podajemy nazwę naszego zapisu, do którego dodawana jest
+później końcówka ".fsave". Podczas wczytywania wybieramy taki właśnie plik
+zapisany przez nas z końcówką ".fsave" .
+--------------------------------------------------------------------------------
+5.Podpowiedź
+Podpowiedź jest zaznaczana przez komputer poprzez narysowanie niebieskiej ściany
+na boisku. Ściany podpowiedzi są automatycznie usuwane przy zakończonym ruchu 
+gracza bądź jego zmianie. Są one również usuwane przy generowaniu nowej
+podpowiedzi.
+--------------------------------------------------------------------------------

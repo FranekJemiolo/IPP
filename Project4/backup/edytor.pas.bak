@@ -1,0 +1,26 @@
+unit Edytor;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+
+type
+  TFormularzEdytora = class(TForm)
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  FormularzEdytora: TFormularzEdytora;
+
+implementation
+
+{$R *.lfm}
+
+end.
+

@@ -1,0 +1,436 @@
+object FormularzGry: TFormularzGry
+  Left = 270
+  Height = 768
+  Top = 244
+  Width = 1366
+  Caption = 'FormularzGry'
+  ClientHeight = 768
+  ClientWidth = 1366
+  Color = clSilver
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '1.0.10.0'
+  object PanelBoiska: TPanel
+    Left = 40
+    Height = 672
+    Top = 48
+    Width = 608
+    BevelOuter = bvNone
+    TabOrder = 0
+  end
+  object PrzyciskZamknij: TButton
+    Left = 1160
+    Height = 40
+    Top = 720
+    Width = 200
+    Caption = 'Zamknij'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskZamknijClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object PrzyciskZapisz: TButton
+    Left = 952
+    Height = 40
+    Top = 672
+    Width = 200
+    Caption = 'Zapisz grę'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskZapiszClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object PrzyciskWczytaj: TButton
+    Left = 952
+    Height = 40
+    Top = 720
+    Width = 200
+    Caption = 'Wczytaj grę'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskWczytajClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object PrzyciskHint: TButton
+    Left = 1160
+    Height = 40
+    Top = 672
+    Width = 200
+    Caption = 'Podpowiedź'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskHintClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object PrzyciskWstecz: TButton
+    Left = 1160
+    Height = 40
+    Top = 624
+    Width = 200
+    Caption = 'Cofnij ruch'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskWsteczClick
+    ParentFont = False
+    TabOrder = 5
+  end
+  object PrzyciskWroc: TButton
+    Left = 952
+    Height = 40
+    Top = 624
+    Width = 200
+    Caption = 'Przywróć ruch'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskWrocClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object LabelAktualnyGracz: TLabel
+    Left = 902
+    Height = 67
+    Top = 8
+    Width = 399
+    Caption = 'Aktualny gracz to : '
+    Font.Height = -53
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelGracz: TLabel
+    Left = 1304
+    Height = 67
+    Top = 8
+    Width = 29
+    Caption = '0'
+    Font.Height = -53
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelRuch: TLabel
+    Left = 902
+    Height = 67
+    Top = 80
+    Width = 458
+    Caption = 'Proszę wykonać ruch'
+    Font.Height = -53
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object PrzyciskPrzerwij: TButton
+    Left = 952
+    Height = 40
+    Top = 576
+    Width = 200
+    Caption = 'Przerwij grę'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskPrzerwijClick
+    ParentFont = False
+    TabOrder = 7
+  end
+  object PrzyciskWznow: TButton
+    Left = 1160
+    Height = 40
+    Top = 576
+    Width = 200
+    Caption = 'Wznów grę'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskWznowClick
+    ParentFont = False
+    TabOrder = 8
+  end
+  object LabelBramka2: TLabel
+    Left = 288
+    Height = 35
+    Top = 8
+    Width = 107
+    Caption = 'Bramka 2'
+    Font.Height = -27
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelBramka1: TLabel
+    Left = 288
+    Height = 35
+    Top = 725
+    Width = 103
+    Caption = 'Bramka 1'
+    Font.Height = -27
+    Font.Name = 'Impact'
+    ParentColor = False
+    ParentFont = False
+  end
+  object PanelEdytora: TPanel
+    Left = 952
+    Height = 312
+    Top = 208
+    Width = 408
+    ClientHeight = 312
+    ClientWidth = 408
+    TabOrder = 9
+    object Image1: TImage
+      Left = 8
+      Height = 50
+      Top = 8
+      Width = 50
+      OnClick = Image1Click
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963E200000089504E47
+        0D0A1A0A0000000D49484452000000320000003208060000001E3F88B1000000
+        06624B474400FF00FF00FFA0BDA793000000097048597300000B1300000B1301
+        009A9C180000000774494D4507DE0604141815102BC216000000197445587443
+        6F6D6D656E74004372656174656420776974682047494D5057810E170000004A
+        4944415468DEEDCF410D00201003B01BFE3D8F2F0A4820AD83A66DE79024F3A0
+        359F101111111111111111111111111111111111111111111111111111111111
+        11111111111111B96303D98204641B1623530000000049454E44AE426082
+      }
+      Stretch = True
+      Transparent = True
+    end
+    object Image2: TImage
+      Left = 72
+      Height = 50
+      Top = 8
+      Width = 50
+      OnClick = Image2Click
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963C100000089504E47
+        0D0A1A0A0000000D49484452000000320000003208060000001E3F88B1000000
+        06624B474400FF00FF00FFA0BDA793000000097048597300000B1300000B1301
+        009A9C180000000774494D4507DE0604141B03CFD22484000000197445587443
+        6F6D6D656E74004372656174656420776974682047494D5057810E1700000029
+        4944415468DEEDCF31110000080420B57FE7B78583070DE824A907A69E100100
+        00000000000000B8B19AD90404B75AF7910000000049454E44AE426082
+      }
+      Stretch = True
+      Transparent = True
+    end
+    object Image5: TImage
+      Left = 136
+      Height = 50
+      Top = 8
+      Width = 50
+      OnClick = Image5Click
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869637901000089504E47
+        0D0A1A0A0000000D49484452000000320000003208060000001E3F88B1000000
+        06624B474400FF00FF00FFA0BDA793000000097048597300000B1300000B1301
+        009A9C180000000774494D4507DE0604142B25C299978A000000197445587443
+        6F6D6D656E74004372656174656420776974682047494D5057810E17000000E1
+        4944415468DEDDD13712C330104351AC47F7BF325D5B5660D8001025BA37DF20
+        B8D65A3B7FB603420E728790823C216420AF0833B31D10F4457A11D49011042D
+        641441099941D0416611549015040D64154101F1409443BC10A5104F4419C41B
+        51028940A443A210A99048441A241A9102C9408443B210A1904C4418241B1102
+        A940B843AA10AE904A841BA41AE10261402C4358104B1026C434840D31056144
+        0C4358114310664437841DD1055140BC4254108F1025C42D440D71095144FC41
+        54113F10650400D81B400101009F1D100070A803BA8BA8EC502F715944150100
+        5F910BB43C6C4084120000000049454E44AE426082
+      }
+      Stretch = True
+      Transparent = True
+    end
+    object Image6: TImage
+      Left = 200
+      Height = 50
+      Top = 8
+      Width = 50
+      OnClick = Image6Click
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869630002000089504E47
+        0D0A1A0A0000000D49484452000000320000003208060000001E3F88B1000000
+        06624B474400FF00FF00FFA0BDA793000000097048597300000B1300000B1301
+        009A9C180000000774494D4507DE0604142118601E3311000000197445587443
+        6F6D6D656E74004372656174656420776974682047494D5057810E1700000168
+        4944415468DEE5D8392F44611487F1DB22B124B6C26EEC4BC10C2A7B2119437C
+        5E7B85A1C268ECFB96581264AE441ECD55C878CFADFFAFE71BFC728A9373027E
+        17029940310A0B81B40F10804F60410DB2E6C0E48119254811B0684C665E0DB3
+        E4C084C09C12A61858F609B36260323E6166D530AB0626AD8429313079458C6B
+        CF7C00D36A98750333A5842905361C987760520953066C1A980935CCD67FC18C
+        2B61CA81AC03F3068CA961B60DCCA82F98576044095301ECF882A904761D9817
+        6058095315831952C3ECF982A93630CF404A0DB36F60926A989C2F981A03F304
+        0CAA610E1C9847A04F09536B601ED43075C0A181E955C31C3930F76A98FA184C
+        8F1AE6D8C0742B611A0CCC9D22E6C4C074F982B955C33402A70ECC2590F009D3
+        AA844900570ECC851AA62D06D3A286B97660CE8166254CBB4F980EE0C68139F3
+        0DD3A484E98C96A3179881E83CFEAB5CA014D01F9DC705056A01C9E80BA30D89
+        30A9E873F9D3D737E9FA596B37FC68250000000049454E44AE426082
+      }
+      Stretch = True
+      Transparent = True
+    end
+    object Image3: TImage
+      Left = 264
+      Height = 50
+      Top = 8
+      Width = 50
+      OnClick = Image3Click
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963C600000089504E47
+        0D0A1A0A0000000D49484452000000320000003208060000001E3F88B1000000
+        06624B474400FF00FF00FFA0BDA793000000097048597300000B1300000B1301
+        009A9C180000000774494D4507DE0604141837C54B83F2000000197445587443
+        6F6D6D656E74004372656174656420776974682047494D5057810E170000002E
+        4944415468DEEDD1010D00300CC3B07DFC39F734A6CA66106506000000000000
+        0000E8F492A421645B8E08B9E603AE000404B31AB4190000000049454E44AE42
+        6082
+      }
+      Stretch = True
+      Transparent = True
+    end
+    object TrackBarSzerokosc: TTrackBar
+      Left = 8
+      Height = 46
+      Top = 104
+      Width = 388
+      Min = 1
+      OnChange = TrackBarSzerokoscChange
+      Position = 1
+      TabOrder = 0
+    end
+    object TrackBarWysokosc: TTrackBar
+      Left = 8
+      Height = 46
+      Top = 184
+      Width = 388
+      Min = 1
+      OnChange = TrackBarWysokoscChange
+      Position = 1
+      TabOrder = 1
+    end
+    object LabelSzerokosc: TLabel
+      Left = 8
+      Height = 27
+      Top = 72
+      Width = 237
+      Caption = 'Współrzędna szerokości piłki'
+      Font.Height = -20
+      Font.Name = 'Impact'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelWysokosc: TLabel
+      Left = 8
+      Height = 27
+      Top = 152
+      Width = 235
+      Caption = 'Współrzędna wysokości piłki'
+      Font.Height = -20
+      Font.Name = 'Impact'
+      ParentColor = False
+      ParentFont = False
+    end
+    object ListBoxGracz: TListBox
+      Left = 224
+      Height = 48
+      Top = 240
+      Width = 172
+      Color = clSilver
+      Items.Strings = (
+        'Gracz numer 1'
+        'Gracz numer 2'
+      )
+      ItemHeight = 23
+      OnSelectionChange = ListBoxGraczSelectionChange
+      ScrollWidth = 170
+      TabOrder = 2
+    end
+    object LabelGraczEdytor: TLabel
+      Left = 8
+      Height = 27
+      Top = 240
+      Width = 131
+      Caption = 'Wybierz gracza :'
+      Font.Height = -20
+      Font.Name = 'Impact'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object PrzyciskEdytuj: TButton
+    Left = 952
+    Height = 40
+    Top = 160
+    Width = 200
+    Caption = 'Edytuj grę'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskEdytujClick
+    ParentFont = False
+    TabOrder = 10
+  end
+  object PrzyciskZakonczEdytowanie: TButton
+    Left = 1160
+    Height = 40
+    Top = 160
+    Width = 200
+    Caption = 'Zatwierdź'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskZakonczEdytowanieClick
+    ParentFont = False
+    TabOrder = 11
+  end
+  object PrzyciskCofnijCalyRuch: TButton
+    Left = 1160
+    Height = 40
+    Top = 528
+    Width = 200
+    Caption = 'Cofnij cały ruch'
+    Color = clSkyBlue
+    Font.Height = -27
+    Font.Name = 'Impact'
+    OnClick = PrzyciskCofnijCalyRuchClick
+    ParentFont = False
+    TabOrder = 12
+  end
+  object PrzyciskWrocCalyRuch: TButton
+    Left = 952
+    Height = 40
+    Top = 528
+    Width = 200
+    Caption = 'Przywróć cały ruch'
+    Color = clSkyBlue
+    Font.Height = -25
+    Font.Name = 'Impact'
+    OnClick = PrzyciskWrocCalyRuchClick
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Timer1: TTimer
+    Interval = 20
+    OnTimer = Timer1Timer
+    OnStartTimer = Timer1StartTimer
+    left = 864
+    top = 64
+  end
+  object OpenDialog1: TOpenDialog
+    InitialDir = 'ExtractFilePath(pilka)'
+    left = 864
+    top = 8
+  end
+  object SaveDialog1: TSaveDialog
+    InitialDir = 'ExtractPathName(pilka)'
+    left = 864
+    top = 128
+  end
+end

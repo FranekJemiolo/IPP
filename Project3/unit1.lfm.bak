@@ -1,0 +1,75 @@
+object Form1: TForm1
+  Left = 260
+  Height = 663
+  Top = 241
+  Width = 1366
+  Caption = 'Testy Językowe'
+  ClientHeight = 663
+  ClientWidth = 1366
+  Color = clSkyBlue
+  LCLVersion = '1.0.10.0'
+  object Label1: TLabel
+    Left = 368
+    Height = 121
+    Top = 56
+    Width = 606
+    Caption = 'Testy Językowe'
+    Color = clSkyBlue
+    Font.Color = clNavy
+    Font.Height = -98
+    Font.Name = 'Impact'
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object PrzyciskRozpocznij: TButton
+    Left = 496
+    Height = 159
+    Top = 248
+    Width = 355
+    Caption = 'Rozpocznij'
+    Color = clGray
+    Font.Color = clSilver
+    Font.Height = -49
+    Font.Name = 'Impact'
+    OnClick = PrzyciskRozpocznijClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object PrzyciskZamknij: TButton
+    Left = 1024
+    Height = 160
+    Top = 480
+    Width = 320
+    Caption = 'Zamknij'
+    Color = clGray
+    Font.Color = clSilver
+    Font.Height = -49
+    Font.Name = 'Impact'
+    OnClick = PrzyciskZamknijClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object PrzyciskTesty: TButton
+    Left = 24
+    Height = 161
+    Top = 480
+    Width = 304
+    Caption = 'Wybierz plik testu'
+    Color = clGray
+    Font.Color = clSilver
+    Font.Height = -34
+    Font.Name = 'Impact'
+    OnClick = PrzyciskTestyClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object OpenDialog1: TOpenDialog
+    Width = 852
+    Height = 630
+    InitialDir = ' ExtractFilePath(testyJezykowe);'
+    left = 242
+    top = 344
+  end
+end

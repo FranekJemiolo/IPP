@@ -1,0 +1,23 @@
+program pilka;
+
+{$mode objfpc}{$H+}
+
+uses
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  Interfaces, // this includes the LCL widgetset
+  Forms, Start, Gra, Boisko, GraczAI, Edytor
+  { you can add units after this };
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := True;
+  Application.Initialize;
+  Application.CreateForm(TFormularzStartowy, FormularzStartowy);
+  Application.CreateForm(TFormularzGry, FormularzGry);
+  Application.CreateForm(TFormularzEdytora, FormularzEdytora);
+  Application.Run;
+end.
+
